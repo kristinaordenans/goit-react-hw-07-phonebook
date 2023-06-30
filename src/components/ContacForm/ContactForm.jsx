@@ -3,8 +3,8 @@ import { useDispatch } from "react-redux";
 import { Form, Button, Label, Input, Span } from "./ContactForm.styled";
 import { useRef } from "react";
 import { useSelector } from "react-redux";
-import { getContacts } from "redux/selector";
-import { addContact } from "redux/contactSlice";
+import { getItems } from "redux/selector";
+import { addContact } from "redux/operations";
 
 
 export const ContactForm = () => {
@@ -12,7 +12,7 @@ export const ContactForm = () => {
   const [number, setPhone] = useState('');
   const dispatch = useDispatch();
   const formReff = useRef(null);
-  const  contacts  = useSelector(getContacts);
+  const  contacts  = useSelector(getItems);
 
   const handleChange = e => {
     switch (e.target.name) {
