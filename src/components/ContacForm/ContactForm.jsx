@@ -30,8 +30,8 @@ export const ContactForm = () => {
   };
 
   const handlrAddToContactList = (e) => {
-        const includesName = contacts.find(({ name }) => name);
-        const includesNumber = contacts.find(({ number }) => number);
+        const includesName = contacts.find(contact => contact.name === name);
+        const includesNumber = contacts.find(contact => contact.number === number);
         e.preventDefault();
 
         if(includesName) {

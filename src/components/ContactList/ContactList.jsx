@@ -1,5 +1,4 @@
 import React from "react";
-import { PropTypes } from "prop-types";
 import { ContactItem } from "components/ContactItem/ContactItem";
 import { ContactListContainer } from "./ContactList.styled";
 import { useSelector } from "react-redux";
@@ -27,13 +26,4 @@ export const ContactList = () => {
        </ContactListContainer>
     </div>
     )
-}
-
-ContactList.propTypes = {
-    contacts: PropTypes.arrayOf(
-        PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        id: PropTypes.string.isRequired,
-        number: PropTypes.string.isRequired,
-    }).isRequired),
 }
